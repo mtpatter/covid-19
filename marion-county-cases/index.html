@@ -45,9 +45,10 @@ body {
 <body>
 	<h1>Covid-19 cases in Marion County</h1>
 
-<!-- <font style="font-size:14px;">Show tests:</font> -->
+<font style="font-size:14px;">Show tests:</font>
 <select id="selectbox">
 	<option value="_1">False</option>
+	<option value="_2">True</option>
 </select>
 
 
@@ -222,10 +223,10 @@ function chart(data) {
 		}
 	}
 
- 	var selectbox = d3.select("#selectbox")
+	var selectbox = d3.select("#selectbox")
 		.on("change", function() {
-			update("_1", 750);
-		}) 
+			update(this.value, 750);
+		})
 }
 
 </script>
